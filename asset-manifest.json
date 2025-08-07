@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/playersconnect-landing/static/css/main.e6c13ad2.css",
-    "main.js": "/playersconnect-landing/static/js/main.749c8ae8.js",
-    "static/js/151.79c41d36.chunk.js": "/playersconnect-landing/static/js/151.79c41d36.chunk.js",
-    "service-worker.js": "/playersconnect-landing/service-worker.js",
-    "index.html": "/playersconnect-landing/index.html",
-    "main.e6c13ad2.css.map": "/playersconnect-landing/static/css/main.e6c13ad2.css.map",
-    "main.749c8ae8.js.map": "/playersconnect-landing/static/js/main.749c8ae8.js.map",
-    "151.79c41d36.chunk.js.map": "/playersconnect-landing/static/js/151.79c41d36.chunk.js.map"
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.a6f1b5ef.js",
+    "static/js/151.79c41d36.chunk.js": "/static/js/151.79c41d36.chunk.js",
+    "service-worker.js": "/service-worker.js",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.a6f1b5ef.js.map": "/static/js/main.a6f1b5ef.js.map",
+    "151.79c41d36.chunk.js.map": "/static/js/151.79c41d36.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.749c8ae8.js"
+    "static/js/main.a6f1b5ef.js"
   ]
 }
