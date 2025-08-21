@@ -28,13 +28,31 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Screenshots Placeholder */}
+      {/* Screenshots Preview */}
       <section className="bg-gray-100 py-16 px-6">
         <h2 className="text-3xl font-bold mb-10 text-center">App Preview</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <ScreenshotCard />
-          <ScreenshotCard />
-          <ScreenshotCard />
+        <div
+          className="flex overflow-x-auto space-x-6 max-w-5xl mx-auto px-2 py-2"
+          style={{
+            WebkitOverflowScrolling: "touch",
+            scrollBehavior: "smooth",
+          }}
+        >
+          <img
+            src="/screenshot-splash.jpg"
+            alt="Splash Screenshot"
+            className="h-80 w-auto rounded-xl shadow-lg flex-shrink-0 bg-gray-200 object-cover"
+          />
+          <img
+            src="/screenshot-gymdetails.jpg"
+            alt="Gym Details Screenshot"
+            className="h-80 w-auto rounded-xl shadow-lg flex-shrink-0 bg-gray-200 object-cover"
+          />
+          <img
+            src="/screenshot-map.jpg"
+            alt="Map Screenshot"
+            className="h-80 w-auto rounded-xl shadow-lg flex-shrink-0 bg-gray-200 object-cover"
+          />
         </div>
       </section>
 
