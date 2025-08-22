@@ -2,93 +2,109 @@ import React from "react";
 
 export default function LandingPage() {
   return (
-    <main className="bg-white text-gray-800 min-h-screen font-sans">
-      {/* Hero Section */}
-      <section className="px-6 py-20 text-center bg-gradient-to-b from-gray-900 to-black text-white">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">PlayersConnect+</h1>
-        <p className="text-xl md:text-2xl font-light mb-6">Where Players Belong</p>
-        <a
-          href="https://testflight.apple.com/join/at8m7y2w"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full shadow"
-        >
-          Download on TestFlight
-        </a>
-      </section>
+    <div className="relative min-h-screen flex flex-col items-center justify-start">
+      <main className="relative z-10 bg-white bg-opacity-0 flex flex-col items-center px-6 pt-24 pb-12">
+        <section className="max-w-4xl text-center mb-12">
+          <h1 className="text-4xl font-extrabold mb-4">PlayersConnect+</h1>
+          <p className="text-lg text-gray-700 mb-6">
+            Discover local basketball courts, find pickup games, and connect with players near you.
+            Whether you're looking for a casual game or a competitive match, PlayersConnect has you covered.
+          </p>
+          <button
+            type="button"
+            className="inline-block bg-black hover:bg-gray-800 text-white text-xl font-bold py-4 px-10 rounded-full shadow-2xl transform hover:scale-105 transition duration-300"
+            onClick={() => window.open("https://testflight.apple.com/join/at8m7y2w", "_blank")}
+          >
+            Download  iOS Beta
+          </button>
+        </section>
 
-      {/* Features Section */}
-      <section className="py-16 px-6 max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10 text-center">App Features</h2>
-        <div className="grid md:grid-cols-2 gap-10">
-          <Feature title="Player Profiles" description="Create a custom player profile with confidence and skill ratings." />
-          <Feature title="Gym Check-In" description="Check in and out of local gyms to build your reputation." />
-          <Feature title="Player Ratings" description="Rate teammates on hustle, defense, teamwork, and more." />
-          <Feature title="Group Management" description="Create and manage private or public groups of players." />
-        </div>
-      </section>
+        {/* Removed App Screenshots Section */}
 
-      {/* Screenshots Preview */}
-      <section className="bg-gray-100 py-16 px-6">
-        <h2 className="text-3xl font-bold mb-10 text-center">App Preview</h2>
-        <div
-          className="flex overflow-x-auto space-x-6 max-w-5xl mx-auto px-2 py-2"
-          style={{
-            WebkitOverflowScrolling: "touch",
-            scrollBehavior: "smooth",
-          }}
-        >
-          <img
-            src="/screenshot-splash.jpg"
-            alt="Splash Screenshot"
-            className="h-80 w-auto rounded-xl shadow-lg flex-shrink-0 bg-gray-200 object-cover"
-          />
-          <img
-            src="/screenshot-gymdetails.jpg"
-            alt="Gym Details Screenshot"
-            className="h-80 w-auto rounded-xl shadow-lg flex-shrink-0 bg-gray-200 object-cover"
-          />
-          <img
-            src="/screenshot-map.jpg"
-            alt="Map Screenshot"
-            className="h-80 w-auto rounded-xl shadow-lg flex-shrink-0 bg-gray-200 object-cover"
-          />
-        </div>
-      </section>
+        {/* Player Profiles Section */}
+        <section className="max-w-4xl w-full mt-16 mb-12">
+          <h2 className="text-2xl font-bold mb-3 text-center">Player Profiles</h2>
+          <p className="text-lg text-gray-700 text-center">
+            Create your own unique profile to showcase your basketball skills, stats, and playing history. Connect with others, share your favorite courts, and join the community.
+          </p>
+          <div className="flex justify-center mt-4 space-x-4">
+            <img
+              src={process.env.PUBLIC_URL + "/profilepic.png"}
+              alt="Profile Pic Screenshot"
+              className="w-64 max-h-96 rounded-xl shadow-lg object-cover bg-gray-100"
+              style={{ aspectRatio: "9/19.5" }}
+            />
+            <img
+              src={process.env.PUBLIC_URL + "/confidencescreen.png"}
+              alt="Confidence Screen Screenshot"
+              className="w-64 max-h-96 rounded-xl shadow-lg object-cover bg-gray-100"
+              style={{ aspectRatio: "9/19.5" }}
+            />
+          </div>
+        </section>
 
-      {/* Gym Admin CTA */}
-      <section className="py-12 bg-white px-6 text-center">
-        <h3 className="text-xl font-semibold mb-3">Are you a Gym Owner?</h3>
-        <p className="mb-4 text-gray-600">Request to become a verified Gym Admin and grow your community.</p>
-        <a
-          href="mailto:playersconnectapp@gmail.com"
-          className="bg-gray-900 text-white px-5 py-3 rounded-full hover:bg-gray-700"
-        >
-          Contact Us
-        </a>
-      </section>
+        {/* Gym Check-In Section */}
+        <section className="max-w-4xl w-full mb-12">
+          <h2 className="text-2xl font-bold mb-3 text-center">Gym Check-In</h2>
+          <p className="text-lg text-gray-700 text-center">
+            Instantly check in at your local gym or court to let others know you're ready to play. See who's checked in and join games in real time.
+          </p>
+          <div className="flex justify-center mt-4 space-x-4">
+            <img
+              src={process.env.PUBLIC_URL + "/screenshot-map.png"}
+              alt="Map Screenshot"
+              className="w-64 max-h-96 rounded-xl shadow-lg object-cover bg-gray-100"
+              style={{ aspectRatio: "9/19.5" }}
+            />
+            <img
+              src={process.env.PUBLIC_URL + "/screenshot-gymdetails.png"}
+              alt="Gym Details Screenshot"
+              className="w-64 max-h-96 rounded-xl shadow-lg object-cover bg-gray-100"
+              style={{ aspectRatio: "9/19.5" }}
+            />
+          </div>
+        </section>
 
-      {/* Footer */}
-      <footer className="py-6 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} PlayersConnect+. All rights reserved.
-      </footer>
-    </main>
-  );
-}
+        {/* Player Ratings Section */}
+        <section className="max-w-4xl w-full mb-12">
+          <h2 className="text-2xl font-bold mb-3 text-center">Player Ratings</h2>
+          <p className="text-lg text-gray-700 text-center">
+            Rate your fellow players after each game and build your reputation. Find reliable teammates and ensure a great game experience every time.
+          </p>
+          <div className="flex justify-center mt-4">
+            <img
+              src={process.env.PUBLIC_URL + "/ratingscreen.png"}
+              alt="Rating Screen Screenshot"
+              className="w-64 max-h-96 rounded-xl shadow-lg object-cover bg-gray-100"
+              style={{ aspectRatio: "9/19.5" }}
+            />
+          </div>
+        </section>
 
-function Feature({ title, description }) {
-  return (
-    <div className="bg-white rounded-lg shadow p-6">
-      <h4 className="text-xl font-semibold mb-2">{title}</h4>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
+        {/* Group Management Section */}
+        <section className="max-w-4xl w-full mb-12">
+          <h2 className="text-2xl font-bold mb-3 text-center">Group Management</h2>
+          <p className="text-lg text-gray-700 text-center">
+            Organize your own basketball groups, invite friends, and schedule games with ease. Stay connected and keep the competition going!
+          </p>
+        </section>
 
-function ScreenshotCard() {
-  return (
-    <div className="h-64 bg-gray-300 rounded-lg shadow flex items-center justify-center text-gray-500">
-      Screenshot
+        {/* Gym Owner Section */}
+        <section className="max-w-4xl w-full mb-12">
+          <h2 className="text-2xl font-bold mb-3 text-center">Are you a Gym Owner?</h2>
+          <p className="text-lg text-gray-700 text-center">
+            List your facility on PlayersConnect to attract more players and manage your court's schedule. Reach out to us to get started and grow your basketball community.
+          </p>
+        </section>
+
+        {/* Contact Us Section */}
+        <section className="max-w-4xl w-full mb-8">
+          <h2 className="text-2xl font-bold mb-3 text-center">Contact Us</h2>
+          <p className="text-lg text-gray-700 text-center">
+            Have questions, feedback, or want to partner with us? <a href="mailto:playersconnectapp@gmail.com" className="text-blue-600 underline">Click Here</a> — we'd love to hear from you!
+          </p>
+        </section>
+      </main>
     </div>
   );
 }
