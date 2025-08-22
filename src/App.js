@@ -51,13 +51,13 @@ export default function LandingPage() {
           </p>
           <div className="flex justify-center mt-4 space-x-4">
             <img
-              src={process.env.PUBLIC_URL + "/screenshot-map.png"}
+              src={process.env.PUBLIC_URL + "/Screenshot-map.png"}
               alt="Map Screenshot"
               className="w-64 max-h-96 rounded-xl shadow-lg object-cover bg-gray-100"
               style={{ aspectRatio: "9/19.5" }}
             />
             <img
-              src={process.env.PUBLIC_URL + "/screenshot-gymdetails.png"}
+              src={process.env.PUBLIC_URL + "/Screenshot-gymdetails.png"}
               alt="Gym Details Screenshot"
               className="w-64 max-h-96 rounded-xl shadow-lg object-cover bg-gray-100"
               style={{ aspectRatio: "9/19.5" }}
@@ -73,7 +73,7 @@ export default function LandingPage() {
           </p>
           <div className="flex justify-center mt-4">
             <img
-              src={process.env.PUBLIC_URL + "/ratingscreen.png"}
+              src={process.env.PUBLIC_URL + "/RatingScreen.png"}
               alt="Rating Screen Screenshot"
               className="w-64 max-h-96 rounded-xl shadow-lg object-cover bg-gray-100"
               style={{ aspectRatio: "9/19.5" }}
